@@ -1,0 +1,24 @@
+Prerequisites:
+1. Enable connection to AWS account with ACCESS KEY  and SECRET KEY 
+2. Run "terraform init" .
+3. SSH-key required . Use the ~/.ssh/id-rsa.pub content to define in "key-pair-public" 
+value in var.tf file . the dafault name for key is "deployer-key" , change if required in var.tf
+
+STEP 1:
+Edit settings in the var.tf file for instance "region" , public_subnet , private_subnets ...
+Change the "sshToWebServer" in var.tf file  when specific IP or range of IPs to connect with SSH to web-server
+
+STEP 2: 
+Edit Database Admin  USER , PASSWORD in the var.tf file and default database name if required
+
+STEP 3: 
+$ terraform plan
+$ terraform apply 
+
+STEP 4: 
+$ terraform output
+Use the public IP or name to verify connection with SSH (default is 22) and HTTP (default is 80)
+
+STEP 5: 
+open web page :
+http://<IP or NAME of web server>/SamplePage.php
