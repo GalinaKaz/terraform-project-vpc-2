@@ -51,7 +51,7 @@ variable "sshToWebServer" {
 }
 
 
-#-----------------------DATABASE configutation--------------------
+#-----------------------DATABASE configuration--------------------
  
 variable "db-name" {
   default = "demodb"
